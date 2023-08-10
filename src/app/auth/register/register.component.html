@@ -1,0 +1,69 @@
+<section>
+  <div class="row login-container">
+    <div class="col-12 col-lg-12 col-xl-12 left-container d-flex-center">
+      <mat-card class="card">
+        <mat-card-content>
+          <div class="form-container">
+            <h2>Welcome</h2>
+            <form [formGroup]="registerForm" class="login-form">
+              <mat-form-field class="example-full-width">
+                <mat-label>Username</mat-label>
+                <input
+                  matInput
+                  placeholder="Username"
+                  autocomplete="off"
+                  formControlName="userName"
+                />
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  placeholder="Email"
+                  autocomplete="off"
+                  formControlName="email"
+                />
+                <mat-icon matSuffix>mail</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  type="{{ inputType }}"
+                  placeholder="Password"
+                  autocomplete="off"
+                  formControlName="password"
+                />
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  type="{{ inputType }}"
+                  placeholder="Password"
+                  autocomplete="off"
+                  formControlName="confirmPassword"
+                />
+                <mat-icon matSuffix (click)="changeInputType()"
+                  >visibility</mat-icon
+                >
+              </mat-form-field>
+              <button
+                mat-raised-button
+                color="primary"
+                class="btn-login"
+                (click)="login()"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

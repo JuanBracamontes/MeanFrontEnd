@@ -1,0 +1,10 @@
+<ul class="breadcrumb breadcrumb-home-icon">
+  <mat-icon class="" style="margin-right: 1rem" routerLink="dashboard"
+    >home</mat-icon
+  >
+  <li *ngFor="let breadcrumb of breadcrumbs" style="cursor: pointer">
+    <span [routerLink]="breadcrumb.link" routerLinkActive="router-link-active">
+      {{ breadcrumb.label }}
+    </span>
+  </li>
+</ul>

@@ -1,0 +1,73 @@
+<!-- <div style="width: 40%; margin: auto; margin-top: 100px">
+  <div>
+    <label for="">Type something</label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="Type something"
+        autocomplete="off"
+        [(ngModel)]="text"
+        (change)="sendNotification()"
+      />
+      <mat-icon matSuffix class="primary-color">mail</mat-icon>
+    </mat-form-field>
+    <div style="margin-top: 3rem">
+      <div *ngFor="let a of messages">
+        <span>{{ a.user }}:</span>
+        <br />
+        <span>{{ a.msg }}</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+<mat-card style="width: 80%" class="slide-bottom">
+  <mat-card-header class="card-header">
+    <mat-card-title class="card-header__title text-focus-in"
+      >Create Appointment</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <form class="tp-form">
+      <h3 class="card-section">Personal information</h3>
+      <section class="section-information">
+        <mat-form-field appearance="outline" class="box">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Placeholder" />
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="box">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Placeholder" />
+        </mat-form-field>
+        <mat-form-field
+          class="example-full-width autocomplete-position box"
+          appearance="outline"
+        >
+          <mat-label>Assignee</mat-label>
+          <input
+            type="text"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option
+              *ngFor="let option of filteredOptions | async"
+              [value]="option"
+            >
+              {{ option.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </section>
+
+      <h3 class="card-section">Hospital</h3>
+      <section class="section-information"></section>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end" style="margin-bottom: 2rem">
+    <button mat-raised-button class="btn-actions bg-primary">Save</button>
+    <button mat-raised-button class="btn-actions bg-cancel">Cancel</button>
+  </mat-card-actions>
+</mat-card>

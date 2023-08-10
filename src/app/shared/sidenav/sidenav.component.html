@@ -1,0 +1,29 @@
+<mat-list role="list">
+  <h3 class="sidenav-section">Home</h3>
+  <mat-list-item class="item-list" role="listitem" routerLink="home/hospitals"
+    ><mat-icon>vaccines</mat-icon> Hospitals</mat-list-item
+  >
+  <mat-list-item
+    class="item-list"
+    class="item-list"
+    role="listitem"
+    routerLink="home/doctors"
+    ><mat-icon>medical_services</mat-icon> Doctors</mat-list-item
+  >
+
+  <h3 class="sidenav-section">Managment</h3>
+  <mat-list-item
+    class="item-list"
+    role="listitem"
+    routerLink="managment/locations"
+    ><mat-icon>map</mat-icon> Location</mat-list-item
+  >
+
+  <mat-list-item class="item-list" role="listitem" routerLink="managment/agenda"
+    ><mat-icon>message</mat-icon> Agenda</mat-list-item
+  >
+
+  <mat-list-item class="item-list" role="listitem" (click)="logout()"
+    ><mat-icon>logout</mat-icon> Logout</mat-list-item
+  >
+</mat-list>

@@ -1,0 +1,41 @@
+.mat-icon {
+  vertical-align: center;
+  margin-right: 1rem;
+}
+
+.mat-divider {
+  border-top-width: 2px;
+  border-color: white;
+}
+
+.mat-list-item {
+  color: #94a3b8 !important;
+  font-size: 1rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  margin: 0 8px;
+}
+
+:host::ng-deep .mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+  display: flex;
+  align-items: center;
+  color: #13322b;
+
+  &:hover {
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.sidenav-section {
+  margin-left: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.item-list {
+  cursor: pointer !important;
+}
